@@ -6,15 +6,15 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Erdal Kutay Sesen</title>
+        <link rel="icon" href="/images/croped_moi.png" />
       </Head>
 
       <main>
         <Header title="Kutay" />
-        <p className="description">
+        {/*<p className="description">
           Get started by editing <code>pages/index.js</code>
-        </p>
+        </p>*/}
       </main>
 
       <Footer />
