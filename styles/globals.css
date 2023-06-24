@@ -33,3 +33,12 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+#tsparticles{
+  z-index: -1 !important;
+}
+
+.Card{
+  margin-bottom: 10px;
+  width: 60%;
+}
