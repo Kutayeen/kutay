@@ -5,11 +5,14 @@ import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { particlesOptions } from "constants/options";
-import { about } from "constants/language";
-import { Card } from 'antd';
+import { about, aboutText } from "constants/language";
+import { Card } from "antd";
 import {
-  CodeOutlined
-} from '@ant-design/icons';
+  CodeOutlined,
+  LinkedinOutlined,
+  GithubOutlined,
+  ShopOutlined
+} from "@ant-design/icons";
 
 export default function Home() {
   const particlesInit = useCallback(async (engine) => {
@@ -32,13 +35,36 @@ export default function Home() {
       </Head>
 
       <main>
-      
-        <Card title= <><CodeOutlined /><text> {about} </text></> bordered={false} className="Card"> I am a software developer with a passion for developing innovative solutions to complex problems. I have a
-        experience in software engineering, machine learning, and artificial intelligence, and am interested in natural
-        language processing. I am an excellent communicator and team player and am always looking for ways to
-        improve the efficiency and effectiveness of my work. I am an active member of the computer science community
-        and am always eager to share my knowledge and experience with others.</Card>        
-        
+        <Card
+          title=<>
+            <CodeOutlined />
+            <text> {about} </text>
+          </>
+          bordered={false}
+          className="Card"
+        >
+          {aboutText()}
+        </Card>
+
+        <Card>
+          <LinkedinOutlined
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/erdalkutaysesen/",
+                "_blank"
+              )
+            }
+            style={{ fontSize: "32px", marginRight: "50px" }}
+          />
+          <GithubOutlined
+            onClick={() => window.open("https://github.com/Kutayeen", "_blank")}
+            style={{ fontSize: "32px", marginRight: "50px" }}
+          />
+          <ShopOutlined
+            onClick={() => window.open("https://kutayeen.itch.io/", "_blank")}
+            style={{ fontSize: "32px" }}
+          />
+        </Card>
       </main>
 
       <Particles
